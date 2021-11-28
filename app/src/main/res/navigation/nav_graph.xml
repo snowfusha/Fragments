@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        tools:layout="@layout/fragment_one"
+        android:name="com.example.myapplication.fragments.FragmentOne"
+        android:label="FragmentOne" >
+        <action
+            android:id="@+id/action_homeFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        tools:layout="@layout/fragment_two"
+        android:name="com.example.myapplication.fragments.FragmentTwo"
+        android:label="FragmentTwo" >
+        <argument android:name="amount"
+            app:argType="integer"
+            android:defaultValue="-1"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.myapplication.fragments.FragmentThree"
+        android:label="FragmentThree"
+        tools:layout="@layout/fragment_three"/>
+
+    <fragment
+        android:id="@+id/photoLibraryFragment"
+        android:name="com.example.myapplication.fragments.FragmentFour"
+        android:label="FragmentFour"
+        tools:layout="@layout/fragment_four"/>
+
+
+</navigation>
